@@ -1,3 +1,4 @@
+```
 project/
 │
 ├── data_preprocessing.py      # Handles data preprocessing and dataset creation
@@ -7,3 +8,4 @@ project/
 ├── feature_importance.py      # Contains feature importance calculation using SHAP
 ├── utils.py                   # Utility functions (e.g., data preparation, feature names)
 └── main.py                    # Main script to run the pipeline
+```
