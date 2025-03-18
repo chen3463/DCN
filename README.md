@@ -1,3 +1,51 @@
+                            +-------------------------+
+                            |     Input Layer         |
+                            | (Numerical, Categorical |
+                            |     Embeddings,         |
+                            |    One-Hot Features)    |
+                            +-----------+-------------+
+                                        |
+                            +-----------v-------------+
+                            | Embedding Layer         |
+                            | (Categorical Features)  |
+                            +-----------+-------------+
+                                        |
+                        +---------------v----------------+
+                        | Concatenate All Features      |
+                        | (Numerical + Embeddings + One|
+                        | Hot Features)                |
+                        +---------------+----------------+
+                                        |
+                    +-------------------+-------------------+
+                    |                                       |
+        +-----------v-----------+               +-----------v-----------+
+        |  Cross Network         |               |   Deep Network        |
+        |  (Feature Interactions)|               |   (High-Level         |
+        |                        |               |    Abstractions)      |
+        +-----------+------------+               +-----------+-----------+
+                    |                                       |
+              +-----v-----+                           +-----v-----+
+              |   Cross   |                           |   Deep    |
+              |   Output  |                           |   Output  |
+              +-----+-----+                           +-----+-----+
+                    |                                       |
+                    +-------------------+-------------------+
+                                        |
+                           +------------v-------------+
+                           |   Concatenate Outputs   |
+                           |  (Cross + Deep Network) |
+                           +------------+-------------+
+                                        |
+                           +------------v-------------+
+                           |   Output Layer (Sigmoid) |
+                           +------------+-------------+
+                                        |
+                           +------------v-------------+
+                           |      Final Output       |
+                           |     (Probability)       |
+                           +-------------------------+
+
+
 ```
 project/
 │
@@ -9,3 +57,4 @@ project/
 ├── utils.py                   # Utility functions (e.g., data preparation, feature names)
 └── main.py                    # Main script to run the pipeline
 ```
+
